@@ -1,56 +1,92 @@
 {
   "$schema": "https://mintlify.com/docs.json",
+  "name": "CICADA Documentation",
   "theme": "mint",
-  "name": "Mint Starter Kit",
-  "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+  "logo": {
+    "light": "/logo-light.svg",
+    "dark": "/logo-dark.svg"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.ico",
+  "colors": {
+    "primary": "#3B82F6",
+    "light": "#BFDBFE",
+    "dark": "#1E3A8A"
+  },
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "User & Developer Guides",
         "groups": [
           {
-            "group": "Get Started",
+            "group": "Introduction",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "introduction/overview",
+              "introduction/features",
+              "introduction/tech-stack"
             ]
           },
           {
-            "group": "Essentials",
+            "group": "Getting Started",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/settings",
-              "essentials/navigation",
-              "essentials/reusable-snippets"
+              "getting-started/prerequisites",
+              "getting-started/setup",
+              "getting-started/running-the-app"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "core-concepts/authentication",
+              "core-concepts/document-management",
+              "core-concepts/ai-search-rag",
+              "core-concepts/file-system-private-public"
+            ]
+          },
+          {
+            "group": "Frontend",
+            "pages": [
+              "frontend/overview" 
+           ]
+          },
+          {
+            "group": "Backend (Supabase)",
+            "pages": [
+              "backend/overview",
+              {
+                "group": "Database",
+                "pages": [
+                  "backend/database/schema-overview"
+                ]
+              },
+              {
+                "group": "Edge Functions",
+                "pages": [
+                  "backend/edge-functions/overview"
+                ]
+              },
+              "backend/authentication"
+            ]
+          },
+
+          {
+            "group": "Testing",
+            "pages": ["testing/overview"]
+          },
+          {
+            "group": "Contributing",
+            "pages": [
+              "contributing/how-to-contribute",
+              "contributing/contributors"
             ]
           }
         ]
       },
       {
-        "tab": "API Reference",
+        "tab": "API Services Reference",
         "groups": [
           {
-            "group": "API Documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint Examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
-            ]
+            "group": "Overview",
+            "pages": ["api-services/overview"]
           }
         ]
       }
@@ -58,45 +94,20 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "CICADA GitHub",
+          "href": "https://github.com/ajojotank/CICADA",
+          "icon": "github"
         }
       ]
     }
   },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "View on GitHub",
+        "href": "https://github.com/ajojotank/CICADA"
       }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
-    }
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
+    ]
   }
+
 }
