@@ -54,4 +54,4 @@ The contents of the `dist/` folder are what you will deploy to your static hosti
 
 **After Building:**
 -   The `dist/` directory will contain an `index.html` file and subdirectories for assets (like `assets/`).
--   Ensure your hosting provider is configured to serve `index.html` for all client-side routes (see [Static Web App Configuration](/config-deploy/static-web-app-config)).
+-   Ensure your hosting provider is configured to serve `index.html` for all client-side routes.
