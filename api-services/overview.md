@@ -1,9 +1,3 @@
-```markdown
----
-title: API Services Overview
-description: How the frontend interacts with backend services.
----
-
 # API Services Overview
 
 The `src/services/api/` directory contains modules that encapsulate the logic for interacting with the CICADA backend, which is primarily Supabase (database and Edge Functions). These services provide a clean, typed, and reusable interface for frontend components to fetch data, submit changes, and invoke backend operations.
@@ -59,4 +53,4 @@ export const fetchDocuments = async (fileSystemType: FileSystemType = 'private')
 Service functions typically include error handling for API calls, throwing errors or returning structured error responses that can be caught and managed by the calling components (often with the help of TanStack Query).
 
 These API services are crucial for maintaining a well-organized and maintainable frontend codebase by separating data interaction logic from UI presentation.
-```
+

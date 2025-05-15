@@ -1,9 +1,3 @@
-```markdown
----
-title: Tech Stack
-description: The technologies and frameworks used in CICADA.
----
-
 # 🏗️ Tech Stack
 
 CICADA is built using a modern, robust, and scalable technology stack:
@@ -43,4 +37,3 @@ CICADA is built using a modern, robust, and scalable technology stack:
     -   `date-fns` for date manipulation
     -   `react-markdown` for rendering markdown content
     -   `sonner` for toast notifications
-```

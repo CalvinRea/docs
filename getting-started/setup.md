@@ -1,9 +1,3 @@
-```markdown
----
-title: Setup Instructions
-description: How to set up the CICADA project locally.
----
-
 # 🛠️ Setup Instructions
 
 Follow these steps to get the CICADA project running on your local machine:
@@ -77,4 +71,3 @@ Follow these steps to get the CICADA project running on your local machine:
         -   Enable and configure the OAuth providers you wish to use (e.g., Google, GitHub, Facebook). You'll need to provide the Client ID and Client Secret obtained from each provider. The redirect URI will be `https://<your-supabase-project-ref>.supabase.co/auth/v1/callback`.
 
 After completing these steps, your local development environment should be ready.
-```

@@ -1,9 +1,3 @@
-```markdown
----
-title: Frontend Overview
-description: An overview of the CICADA frontend architecture.
----
-
 # Frontend Architecture Overview
 
 The CICADA frontend is a single-page application (SPA) built with React, Vite, and TypeScript. It's responsible for user interaction, data presentation, and communication with the Supabase backend.
@@ -60,4 +54,3 @@ Styling is primarily done using Tailwind CSS. shadcn/ui provides a set of beauti
 -   The frontend communicates with Supabase directly for database operations (CRUD) and storage.
 -   Supabase Edge Functions are invoked for more complex backend logic, AI processing, and RAG chat.
 -   API calls are encapsulated within the `src/services/api/` modules, providing a clean interface for components to interact with the backend.
-```

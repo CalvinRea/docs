@@ -1,9 +1,3 @@
-```markdown
----
-title: Prerequisites
-description: Software and accounts needed to run CICADA locally.
----
-
 # Prerequisites
 
 Before you can set up and run CICADA locally, ensure you have the following installed and configured:
@@ -27,4 +21,3 @@ Before you can set up and run CICADA locally, ensure you have the following inst
     -   Required for document processing and AI search capabilities.
     -   This key should be set as an environment variable in your Supabase project for the Edge Functions.
     -   Obtain it from [Google AI Studio](https://aistudio.google.com/app/apikey).
-```

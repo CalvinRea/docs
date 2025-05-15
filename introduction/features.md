@@ -1,9 +1,3 @@
-```markdown
----
-title: Features
-description: Key features of the CICADA platform.
----
-
 # ✨ CICADA Features
 
 CICADA offers a comprehensive suite of features for both users and administrators:
@@ -53,4 +47,3 @@ CICADA offers a comprehensive suite of features for both users and administrator
 
 -   🍪 **Cookie Consent Management**:
     -   GDPR-compliant cookie consent banner.
-```

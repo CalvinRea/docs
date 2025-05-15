@@ -1,9 +1,3 @@
-```markdown
----
-title: Document Management
-description: How documents are managed, organized, and accessed in CICADA.
----
-
 # 📂 Document Management
 
 CICADA provides a comprehensive system for managing constitutional archives, distinguishing between private and public documents, and organizing them into folders.
@@ -152,4 +146,3 @@ RAG combines the strengths of large language models (LLMs) with information retr
 -   **Transparency**: Users can see the source documents, promoting trust and verifiability.
 -   **Up-to-date Information**: The search is always based on the current set of documents in the archive.
 -   **Contextual Understanding**: LLMs can understand nuanced queries and synthesize information from multiple sources.
-```

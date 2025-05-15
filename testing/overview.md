@@ -1,9 +1,3 @@
-```markdown
----
-title: Testing Overview
-description: Approach to testing in the CICADA application.
----
-
 # Testing Overview
 
 CICADA includes a suite of unit tests for its API service layer, primarily focused on ensuring the correct behavior of functions interacting with the Supabase backend. These tests are written using **Vitest**, a Vite-native testing framework.
@@ -63,5 +57,3 @@ The existing tests primarily cover the **API service layer** (`src/services/api/
 ## Running Tests
 Tests are run using the npm test script defined in package.json
 This command will execute Vitest, which discovers and runs all *.test.ts (or similar patterned) files.
-
-```

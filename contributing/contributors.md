@@ -1,9 +1,3 @@
-```markdown
----
-title: Contributors
-description: List of contributors to the CICADA project.
----
-
 # 👥 Contributors
 
 CICADA is a collaborative effort. We extend our heartfelt thanks to everyone who has contributed to its development.
@@ -22,4 +16,3 @@ CICADA is a collaborative effort. We extend our heartfelt thanks to everyone who
 We welcome contributions from everyone! If you're interested in contributing, please see our [How to Contribute](/contributing/how-to-contribute) guide.
 
 Whether you're fixing bugs, adding features, improving documentation, or helping with testing, every contribution is valuable.
-'''

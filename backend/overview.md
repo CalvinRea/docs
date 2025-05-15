@@ -1,9 +1,3 @@
-```markdown
----
-title: Backend Overview (Supabase)
-description: An overview of the CICADA backend powered by Supabase.
----
-
 # Backend Overview (Supabase)
 
 The backend for CICADA is built entirely on **Supabase**, a Backend-as-a-Service (BaaS) platform that provides a suite of tools built on top of PostgreSQL. Supabase offers database hosting, authentication, storage, and serverless edge functions.
@@ -87,4 +81,3 @@ The backend is not a traditional monolithic server but rather a collection of se
 -   **Environment Variables**: Sensitive keys (like `GEMINI_API_KEY`) are stored as environment variables for Edge Functions within the Supabase project settings, not exposed to the client.
 
 The Supabase backend provides a scalable and managed infrastructure, allowing developers to focus on application logic rather than server maintenance.
-```

@@ -1,9 +1,3 @@
-```markdown
----
-title: Running the Application
-description: How to start the CICADA development server.
----
-
 # 🚀 Running the Application
 
 Once you have completed the [Setup Instructions](/getting-started/setup), you can start the CICADA application in development mode.
@@ -61,4 +55,3 @@ The contents of the `dist/` folder are what you will deploy to your static hosti
 **After Building:**
 -   The `dist/` directory will contain an `index.html` file and subdirectories for assets (like `assets/`).
 -   Ensure your hosting provider is configured to serve `index.html` for all client-side routes (see [Static Web App Configuration](/config-deploy/static-web-app-config)).
-``

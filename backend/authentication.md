@@ -1,9 +1,3 @@
-```markdown
----
-title: Supabase Authentication
-description: How CICADA leverages Supabase Auth for user management.
----
-
 # Backend Authentication (Supabase Auth)
 
 CICADA relies on **Supabase Auth** for all its user authentication and management needs. Supabase Auth is a powerful, built-in feature of the Supabase platform that provides secure and easy-to-implement authentication.
@@ -61,4 +55,3 @@ The `AuthProvider` (`src/context/AuthContext.tsx`) uses these functions and list
     The `cleoChat` function utilizes this to get the `user_id` for accessing private vectors.
 
 Supabase Auth provides a comprehensive and secure foundation for CICADA's authentication requirements, simplifying development while ensuring robust security.
-```

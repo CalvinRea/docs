@@ -1,9 +1,3 @@
-```markdown
----
-title: File System (Private vs. Public)
-description: Explanation of the private and public file systems in CICADA.
----
-
 # 🗂️ File System: Private vs. Public
 
 CICADA implements a dual file system concept to cater to different access and privacy requirements for documents. This distinction is managed through separate Supabase tables, storage buckets, and Row Level Security (RLS) policies.
@@ -58,4 +52,3 @@ CICADA implements a dual file system concept to cater to different access and pr
 -   The `match_documents` PostgreSQL function has logic to handle filtering by `user_id` when querying private vectors.
 
 This dual system provides flexibility, allowing CICADA to serve as both a personal knowledge base and a public archive.
-```

@@ -1,9 +1,3 @@
-```markdown
----
-title: AI Search (RAG)
-description: How CICADA implements AI-powered search using Retrieval Augmented Generation.
----
-
 # 🤖 AI Search (Retrieval Augmented Generation - RAG)
 
 CICADA employs an AI-powered search system based on Retrieval Augmented Generation (RAG) to provide users with accurate and contextually relevant answers from the constitutional archives. This is primarily handled by the `cleoChat` Supabase Edge Function (located in `supabase/functions/test/index.ts` in the provided codebase, its content and purpose align with a RAG chat bot).
@@ -80,4 +74,3 @@ This approach significantly improves the factual accuracy, relevance, and specif
 -   **Reduced Need for Fine-Tuning**: RAG provides a way to make LLMs knowledgeable about specific domains without the expensive and complex process of fine-tuning the entire model on that domain's data.
 
 By implementing this RAG architecture, CICADA aims to provide a powerful, reliable, and transparent AI search experience for users exploring constitutional archives.
-```

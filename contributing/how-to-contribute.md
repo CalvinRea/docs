@@ -1,10 +1,3 @@
-
-```markdown
----
-title: How to Contribute
-description: Guidelines for contributing to the CICADA project.
----
-
 # How to Contribute
 
 We welcome contributions to the CICADA project! Whether you're fixing a bug, adding a new feature, or improving documentation, your help is appreciated.
@@ -83,4 +76,3 @@ We welcome contributions to the CICADA project! Whether you're fixing a bug, add
 -   Update documentation if your changes affect existing features or add new ones.
 
 Thank you for contributing to CICADA!
-```

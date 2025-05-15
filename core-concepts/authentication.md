@@ -1,9 +1,3 @@
-```markdown
----
-title: Authentication
-description: Understanding user authentication in CICADA.
----
-
 # 🔐 Authentication
 
 CICADA utilizes Supabase Auth for robust and secure user authentication. This allows users to sign in using various OAuth providers.
@@ -50,4 +44,3 @@ CICADA utilizes Supabase Auth for robust and secure user authentication. This al
 -   `src/components/auth/ProtectedRoute.tsx`: Protects routes based on auth status.
 -   `src/components/auth/UserProfile.tsx`: Displays user info and logout option.
 -   `supabase/seed/Documents_table.sql`: Defines RLS policies based on `auth.uid()`.
-```

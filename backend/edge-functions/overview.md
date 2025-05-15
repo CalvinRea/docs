@@ -1,9 +1,3 @@
-```markdown
----
-title: Edge Functions Overview
-description: An overview of Supabase Edge Functions used in CICADA.
----
-
 # Supabase Edge Functions Overview
 
 CICADA leverages Supabase Edge Functions for server-side logic that needs to be executed in a secure and scalable environment. These are serverless functions written in TypeScript and run on Deno. They are deployed from the `supabase/functions/` directory of the project.
@@ -73,4 +67,4 @@ CICADA leverages Supabase Edge Functions for server-side logic that needs to be 
 -   **Error Handling**: Functions should include robust error handling and return appropriate HTTP status codes.
 
 These Edge Functions form the core of CICADA's backend processing and AI integration capabilities.
-```
+

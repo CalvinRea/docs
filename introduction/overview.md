@@ -1,9 +1,3 @@
-
----
-title: Overview
-description: An introduction to CICADA, a modern constitutional archive search and management system.
----
-
 # 🦋 CICADA Overview
 
 CICADA (Constitutional Inquiry & Case Archive Discovery Assistant) is a full-stack web application designed to modernize the exploration and management of historical constitutional archives. It leverages the power of AI-driven search, a robust backend powered by Supabase, and a sleek, responsive user interface built with React and modern web technologies.

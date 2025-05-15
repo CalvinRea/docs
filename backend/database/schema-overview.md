@@ -1,9 +1,3 @@
-```markdown
----
-title: Database Schema Overview
-description: An overview of the PostgreSQL database schema used by CICADA.
----
-
 # Database Schema Overview
 
 CICADA uses a PostgreSQL database managed by Supabase. The schema is designed to store documents, their associated metadata, AI-generated insights, vector embeddings for search, and user activity logs.
@@ -47,4 +41,3 @@ RLS is extensively used to control data access at the database row level. Polici
 HNSW (Hierarchical Navigable Small World) indexes are created on the `embedding` columns of `private_vectors` and `public_vectors` tables to enable fast and efficient similarity searches.
 
 This schema forms the backbone of CICADA's data storage and retrieval capabilities, supporting both structured metadata and unstructured content for AI processing.
-```
