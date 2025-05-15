@@ -2,11 +2,8 @@
   "$schema": "https://mintlify.com/docs.json",
   "name": "CICADA Documentation",
   "theme": "mint",
-  "logo": {
-    "light": "/logo-light.svg",
-    "dark": "/logo-dark.svg"
-  },
-  "favicon": "/favicon.ico",
+
+  "favicon": "/favicon.svg",
   "colors": {
     "primary": "#3B82F6",
     "light": "#BFDBFE",
