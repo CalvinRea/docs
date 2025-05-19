@@ -65,15 +65,6 @@ The backend is not a traditional monolithic server but rather a collection of se
         -   Streams the LLM's response back to the client.
         -   Handles fetching full source document details.
 
-## Data Flow Example (Chat Query)
-
-1.  Client (e.g., `ChatWindow.tsx`) sends a query to the `cleoChat` Edge Function.
-2.  `cleoChat` embeds the query using Gemini.
-3.  `cleoChat` calls the `match_documents` PostgreSQL function, which queries `private_vectors` and `public_vectors`.
-4.  `match_documents` returns relevant document chunks.
-5.  `cleoChat` prepares a prompt with these chunks and sends it to Gemini for answer generation.
-6.  Gemini's response is streamed back through `cleoChat` to the client.
-
 ## Security
 
 -   **RLS**: Core to Supabase security, ensuring users can only access data they are permitted to.

@@ -25,33 +25,3 @@ If you need to create a development build (e.g., for testing specific build outp
 npm run build:dev
 ```
 This will build the application in development mode and place the output in the `dist` folder.
-```
-
-**File: `getting-started/production-build.md`**
-```markdown
----
-title: Production Build
-description: How to build CICADA for production.
----
-
-# 📦 Production Build
-
-When you are ready to deploy CICADA to a production environment, you need to create an optimized build of the application.
-
-To create a production build, run the following command in your terminal from the project's root directory:
-
-```bash
-npm run build
-```
-
-This command will:
-1.  Use Vite to compile and bundle your React application.
-2.  Optimize the assets (JavaScript, CSS, images) for performance.
-3.  Minify the code.
-4.  Generate static files in the `dist/` directory.
-
-The contents of the `dist/` folder are what you will deploy to your static hosting provider (e.g., Azure Static Web Apps, Vercel, Netlify, AWS S3).
-
-**After Building:**
--   The `dist/` directory will contain an `index.html` file and subdirectories for assets (like `assets/`).
--   Ensure your hosting provider is configured to serve `index.html` for all client-side routes.

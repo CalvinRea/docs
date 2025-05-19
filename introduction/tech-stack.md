@@ -2,6 +2,7 @@
 
 CICADA is built using a modern, robust, and scalable technology stack:
 
+![image](/images/DeploymentDiagram.jpg)
 -   **Frontend**:
     -   **Framework**: React (v18) with Vite
     -   **Language**: TypeScript

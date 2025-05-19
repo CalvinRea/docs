@@ -14,6 +14,8 @@ This approach significantly improves the factual accuracy, relevance, and specif
 
 ## Workflow in CICADA
 
+![image](/images/Process%20View.png)
+
 1.  **User Query**: A user submits a natural language question through the chat interface (`src/components/chat/ChatWindow.tsx`).
 2.  **Query Embedding**:
     -   The `cleoChat` Edge Function receives the user's question.

@@ -40,6 +40,8 @@ The `AdminFiles` page, utilizing the `FileTable.tsx` component, is the central h
 
 ## Workflow for a New Document
 
+![image](/images/Scenarios%20View.png)
+
 1.  User uploads a file via `UploadForm.tsx`.
 2.  The file is uploaded to Supabase Storage (either `private-files` or `public-files` bucket).
 3.  A record is created in the corresponding database table (`documents_private` or `documents_public`).
@@ -70,79 +72,3 @@ The `AdminFiles` page, utilizing the `FileTable.tsx` component, is the central h
     -   `supabase/functions/parseUploadedDocuments/index.ts`: Edge Function for processing documents.
     -   `supabase/seed/Documents_table.sql`: Defines `documents_private` and `documents_public` tables.
     -   `supabase/seed/Vectors_table.sql`: Defines `private_vectors` and `public_vectors` tables.
-```
-
-**File: `core-concepts/ai-search-rag.md`**
-```markdown
----
-title: AI Search (RAG)
-description: How CICADA implements AI-powered search using Retrieval Augmented Generation.
----
-
-# 🤖 AI Search (Retrieval Augmented Generation - RAG)
-
-CICADA employs an AI-powered search system based on Retrieval Augmented Generation (RAG) to provide users with accurate and contextually relevant answers from the constitutional archives. This is primarily handled by the `cleoChat` Supabase Edge Function (referred to as `test/index.ts` in the file structure, but its content suggests a RAG chat bot).
-
-## Overview of RAG
-
-RAG combines the strengths of large language models (LLMs) with information retrieval. Instead of solely relying on the LLM's pre-trained knowledge, RAG first retrieves relevant documents or text snippets from a knowledge base (in this case, the uploaded documents) and then uses these snippets as context for the LLM to generate an answer.
-
-## Workflow
-
-1.  **User Query**: A user submits a natural language question through the chat interface (`src/components/chat/ChatWindow.tsx`).
-2.  **Query Embedding**:
-    -   The `cleoChat` Edge Function receives the user's question.
-    -   It uses a text embedding model (e.g., from Gemini) to convert the user's question into a numerical vector (embedding).
-3.  **Vector Search (Retrieval)**:
-    -   The query embedding is used to search for similar embeddings in the `private_vectors` and `public_vectors` tables in Supabase.
-    -   The `match_documents` PostgreSQL function (`supabase/seed/Document_function.sql`) is crucial here. It performs a similarity search (e.g., cosine similarity or L2 distance) between the query embedding and the stored document chunk embeddings.
-    -   This retrieves the most relevant document chunks (content snippets) related to the user's query. It searches both public vectors and, if the user is authenticated, their private vectors.
-4.  **Context Augmentation**:
-    -   The retrieved document chunks are compiled to form a context.
-5.  **LLM Prompting (Generation)**:
-    -   The `cleoChat` Edge Function constructs a prompt for an LLM (e.g., Gemini). This prompt includes:
-        -   The original user question.
-        -   The retrieved context (relevant document chunks).
-        -   Instructions for the LLM to answer the question based *only* on the provided context and to cite sources.
-6.  **Response Generation**:
-    -   The LLM processes the prompt and generates an answer.
-    -   The `cleoChat` function streams this response back to the client.
-7.  **Display to User**:
-    -   The `ChatWindow.tsx` component displays the streamed AI response.
-    -   It also processes and displays the source documents (from the retrieved chunks) that the AI used, allowing users to verify information.
-
-## Key Components
-
--   **Document Processing (`parseUploadedDocuments` Edge Function)**:
-    -   When documents are uploaded, this function is responsible for:
-        -   Extracting text content.
-        -   Chunking the text into manageable pieces.
-        -   Generating embeddings for each chunk using an embedding model.
-        -   Storing these embeddings along with their content and document ID in `private_vectors` or `public_vectors`.
-
--   **Vector Database**:
-    -   Supabase PostgreSQL with the `pgvector` extension acts as the vector database.
-    -   `private_vectors` and `public_vectors` tables store the embeddings.
-    -   HNSW indexes (`private_vectors_embedding_idx`, `public_vectors_embedding_idx`) are created for efficient similarity searches.
-
--   **`match_documents` Function (`supabase/seed/Document_function.sql`)**:
-    -   A PostgreSQL function that takes a query embedding, match count, similarity threshold, and table name.
-    -   It returns the top matching documents and their similarity scores.
-    -   Handles filtering for user-specific data in `private_vectors`.
-
--   **`cleoChat` Edge Function (`supabase/functions/test/index.ts`)**:
-    -   Orchestrates the RAG pipeline: embedding the query, retrieving documents, prompting the LLM, and streaming the response.
-    -   Handles multi-turn conversations.
-    -   Includes logic for function calling (tool use) by the LLM, potentially for more complex queries or actions.
-    -   Manages fetching full document details based on IDs returned from vector search.
-
--   **Frontend Chat Interface (`src/components/chat/ChatWindow.tsx`)**:
-    -   Sends user queries to the `cleoChat` function.
-    -   Receives and renders the streamed AI response and source documents.
-
-## Benefits of RAG in CICADA
-
--   **Accuracy**: Answers are grounded in the actual content of the archived documents, reducing hallucinations.
--   **Transparency**: Users can see the source documents, promoting trust and verifiability.
--   **Up-to-date Information**: The search is always based on the current set of documents in the archive.
--   **Contextual Understanding**: LLMs can understand nuanced queries and synthesize information from multiple sources.
